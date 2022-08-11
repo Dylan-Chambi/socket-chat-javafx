@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="upb.isc.clientsocketui2.SocketViewController">
+   <children>
+      <Button fx:id="exitButton" layoutX="41.0" layoutY="354.0" mnemonicParsing="false" onAction="#exitOnClick" prefHeight="25.0" prefWidth="43.0" text="Exit" />
+      <Button fx:id="sendButton" layoutX="517.0" layoutY="354.0" mnemonicParsing="false" onAction="#sendOnClick" text="Send" />
+      <TextField fx:id="messageFieldTF" alignment="TOP_LEFT" layoutX="41.0" layoutY="288.0" onKeyPressed="#onEnterPressed" prefHeight="25.0" prefWidth="519.0" promptText="Type a message here..." />
+      <Label layoutX="47.0" layoutY="55.0" text="Connected to:" />
+      <Label layoutX="341.0" layoutY="55.0" text="Username:" />
+      <Label fx:id="connectionIPLabel" layoutX="131.0" layoutY="55.0" text="null" />
+      <Label fx:id="usernameLabel" layoutX="404.0" layoutY="55.0" text="null" />
+      <TextField fx:id="chatID" layoutX="46.0" layoutY="133.0" prefHeight="134.0" prefWidth="510.0" />
+   </children>
+</AnchorPane>
