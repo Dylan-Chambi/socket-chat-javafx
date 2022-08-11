@@ -4,9 +4,9 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="upb.isc.clientsocketui2.SocketViewController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="upb.isc.colorpickerclient.SocketViewController">
    <children>
-      <Button fx:id="sendButton" layoutX="278.0" layoutY="283.0" mnemonicParsing="false" onAction="#sendOnClick" text="Send" />
+      <Button fx:id="sendButton" layoutX="262.0" layoutY="284.0" mnemonicParsing="false" onAction="#sendOnClick" text="Send Color" />
       <Label layoutX="245.0" layoutY="52.0" text="Select a Color">
          <font>
             <Font size="18.0" />

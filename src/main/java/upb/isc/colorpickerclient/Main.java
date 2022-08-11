@@ -1,4 +1,4 @@
-package upb.isc.clientsocketui2;
+package upb.isc.colorpickerclient;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

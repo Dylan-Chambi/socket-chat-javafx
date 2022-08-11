@@ -1,4 +1,4 @@
-package upb.isc.clientsocketui2;
+package upb.isc.colorpickerclient;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -18,8 +18,6 @@ import java.util.ResourceBundle;
 
 public class HomeViewController implements Initializable {
     @FXML
-    private TextField usernameTF;
-    @FXML
     private TextField serverIPTF;
     @FXML
     private TextField portTF;
@@ -28,19 +26,16 @@ public class HomeViewController implements Initializable {
 
     @FXML
     public void onClickConnect(ActionEvent actionEvent) {
-        System.out.println("Text username: " + usernameTF.getText());
         System.out.println("Text serverIP: " + serverIPTF.getText());
         System.out.println("Text port: " + portTF.getText());
 
-        System.out.println("Prompt username: " + usernameTF.getPromptText());
         System.out.println("Prompt serverIP: " + serverIPTF.getPromptText());
         System.out.println("Prompt port: " + portTF.getPromptText());
 
-        String username = (usernameTF.getText().isEmpty()) ? ( usernameTF.getPromptText() ): usernameTF.getText();
         String serverIP = (serverIPTF.getText().isEmpty()) ? ( serverIPTF.getPromptText() ): serverIPTF.getText();
         String port = (portTF.getText().isEmpty()) ? ( portTF.getPromptText() ): portTF.getText();
 
-        ClientSocket.getInstance().setUsername(username);
+
         ClientSocket.getInstance().setServerIP(serverIP);
         ClientSocket.getInstance().setPort(Integer.parseInt(port));
         String connectionStatus = ClientSocket.getInstance().connect(serverIP, Integer.parseInt(port));
@@ -61,9 +56,6 @@ public class HomeViewController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        if(ClientSocket.getInstance().getUsername() != null) {
-            usernameTF.setPromptText(ClientSocket.getInstance().getUsername());
-        }
         if(ClientSocket.getInstance().getServerIP() != null) {
             serverIPTF.setPromptText(ClientSocket.getInstance().getServerIP());
         }

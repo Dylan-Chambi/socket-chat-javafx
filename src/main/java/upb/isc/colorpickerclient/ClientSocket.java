@@ -1,4 +1,4 @@
-package upb.isc.clientsocketui2;
+package upb.isc.colorpickerclient;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
@@ -46,11 +46,11 @@ public class ClientSocket {
         return instance;
     }
 
-    public void sendMessage(String message) {
-        System.out.println("Sending message: " + message.toString());
+    public void sendNewColor(String newColor) {
+        System.out.println("Sending new color: " + newColor);
         try {
             DataOutputStream clientOut = new DataOutputStream(socket.getOutputStream());
-            clientOut.writeUTF(new Message(username, message).toString());
+            clientOut.writeUTF(newColor);
         } catch (IOException e) {
             e.printStackTrace();
         }
